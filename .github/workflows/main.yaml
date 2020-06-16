@@ -28,3 +28,6 @@ jobs:
 
       - name: "Show diff"
         run: git diff
+
+      - name: "Hydrate"
+        run: git commit -a -m 'update' && git push hydated
