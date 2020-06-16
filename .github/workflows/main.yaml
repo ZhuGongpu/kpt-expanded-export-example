@@ -29,5 +29,15 @@ jobs:
       - name: "Show diff"
         run: git diff
 
-      - name: "Hydrate"
-        run: git commit -a -m 'update' && git push hydated
+      # @see https://github.com/marketplace/actions/add-commit
+      - name: "Update the `hydrate` branch"
+        uses: EndBug/add-and-commit@v4
+        with:
+          add: "."
+          author_name: "ci-bot"
+          author_email: "mail@example.com"
+          cwd: "."
+          force: true
+          ref: "hydrate"
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
