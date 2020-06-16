@@ -1,5 +1,5 @@
 name: Kpt
-'on':
+"on":
   push:
     branches:
       - master
@@ -9,19 +9,22 @@ jobs:
     steps:
       - uses: actions/checkout@v2
 
-      - name: 'Run kpt function: tshirt'
-        uses: 'docker://gongpu/kpt:latest'
+      - name: "Run kpt function: tshirt-size"
+        uses: "docker://gongpu/kpt:latest"
         with:
           # NOTE: functions are scoped
           args: >-
-            fn run tshirt --image gcr.io/kustomize-functions/example-tshirt:v0.1.0
-      - name: 'Run kpt function: label-namespace'
-        uses: 'docker://gongpu/kpt:latest'
+            fn run resources --image gcr.io/kustomize-functions/example-tshirt:v0.1.0
+      - name: "Run kpt function: label-namespace"
+        uses: "docker://gongpu/kpt:latest"
         with:
           args: >-
-            fn run label-namespace --image gcr.io/kpt-functions/label-namespace -- label_name=color label_value=blue
-      - name: 'Run kpt function: show result'
-        uses: 'docker://gongpu/kpt:latest'
+            fn run resources --image gcr.io/kpt-functions/label-namespace -- label_name=color label_value=blue
+      - name: "Run kpt function: validate-rolebinding"
+        uses: "docker://gongpu/kpt:latest"
         with:
           args: >-
-            fn source .
+            fn run resources --image gcr.io/kpt-functions/validate-rolebinding -- subject_name=Alice
+
+      - name: "Show diff"
+        run: git diff
