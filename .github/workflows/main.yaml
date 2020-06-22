@@ -348,3 +348,173 @@ jobs:
         with:
           args: >-
             fn run resources --image gcr.io/kpt-functions/validate-rolebinding -- subject_name=Alice
+
+      - name: "Run kpt function: tshirt-size"
+        uses: "docker://gongpu/kpt:latest"
+        with:
+          # NOTE: functions are scoped
+          args: >-
+            fn run resources --image gcr.io/kustomize-functions/example-tshirt:v0.1.0
+      - name: "Run kpt function: label-namespace"
+        uses: "docker://gongpu/kpt:latest"
+        with:
+          args: >-
+            fn run resources --image gcr.io/kpt-functions/label-namespace -- label_name=color label_value=blue
+      - name: "Run kpt function: validate-rolebinding"
+        uses: "docker://gongpu/kpt:latest"
+        with:
+          args: >-
+            fn run resources --image gcr.io/kpt-functions/validate-rolebinding -- subject_name=Alice
+
+      - name: "Run kpt function: tshirt-size"
+        uses: "docker://gongpu/kpt:latest"
+        with:
+          # NOTE: functions are scoped
+          args: >-
+            fn run resources --image gcr.io/kustomize-functions/example-tshirt:v0.1.0
+      - name: "Run kpt function: label-namespace"
+        uses: "docker://gongpu/kpt:latest"
+        with:
+          args: >-
+            fn run resources --image gcr.io/kpt-functions/label-namespace -- label_name=color label_value=blue
+      - name: "Run kpt function: validate-rolebinding"
+        uses: "docker://gongpu/kpt:latest"
+        with:
+          args: >-
+            fn run resources --image gcr.io/kpt-functions/validate-rolebinding -- subject_name=Alice
+
+      - name: "Run kpt function: tshirt-size"
+        uses: "docker://gongpu/kpt:latest"
+        with:
+          # NOTE: functions are scoped
+          args: >-
+            fn run resources --image gcr.io/kustomize-functions/example-tshirt:v0.1.0
+      - name: "Run kpt function: label-namespace"
+        uses: "docker://gongpu/kpt:latest"
+        with:
+          args: >-
+            fn run resources --image gcr.io/kpt-functions/label-namespace -- label_name=color label_value=blue
+      - name: "Run kpt function: validate-rolebinding"
+        uses: "docker://gongpu/kpt:latest"
+        with:
+          args: >-
+            fn run resources --image gcr.io/kpt-functions/validate-rolebinding -- subject_name=Alice
+
+      - name: "Run kpt function: tshirt-size"
+        uses: "docker://gongpu/kpt:latest"
+        with:
+          # NOTE: functions are scoped
+          args: >-
+            fn run resources --image gcr.io/kustomize-functions/example-tshirt:v0.1.0
+      - name: "Run kpt function: label-namespace"
+        uses: "docker://gongpu/kpt:latest"
+        with:
+          args: >-
+            fn run resources --image gcr.io/kpt-functions/label-namespace -- label_name=color label_value=blue
+      - name: "Run kpt function: validate-rolebinding"
+        uses: "docker://gongpu/kpt:latest"
+        with:
+          args: >-
+            fn run resources --image gcr.io/kpt-functions/validate-rolebinding -- subject_name=Alice
+
+      - name: "Run kpt function: tshirt-size"
+        uses: "docker://gongpu/kpt:latest"
+        with:
+          # NOTE: functions are scoped
+          args: >-
+            fn run resources --image gcr.io/kustomize-functions/example-tshirt:v0.1.0
+      - name: "Run kpt function: label-namespace"
+        uses: "docker://gongpu/kpt:latest"
+        with:
+          args: >-
+            fn run resources --image gcr.io/kpt-functions/label-namespace -- label_name=color label_value=blue
+      - name: "Run kpt function: validate-rolebinding"
+        uses: "docker://gongpu/kpt:latest"
+        with:
+          args: >-
+            fn run resources --image gcr.io/kpt-functions/validate-rolebinding -- subject_name=Alice
+
+      - name: "Run kpt function: tshirt-size"
+        uses: "docker://gongpu/kpt:latest"
+        with:
+          # NOTE: functions are scoped
+          args: >-
+            fn run resources --image gcr.io/kustomize-functions/example-tshirt:v0.1.0
+      - name: "Run kpt function: label-namespace"
+        uses: "docker://gongpu/kpt:latest"
+        with:
+          args: >-
+            fn run resources --image gcr.io/kpt-functions/label-namespace -- label_name=color label_value=blue
+      - name: "Run kpt function: validate-rolebinding"
+        uses: "docker://gongpu/kpt:latest"
+        with:
+          args: >-
+            fn run resources --image gcr.io/kpt-functions/validate-rolebinding -- subject_name=Alice
+
+      - name: "Run kpt function: tshirt-size"
+        uses: "docker://gongpu/kpt:latest"
+        with:
+          # NOTE: functions are scoped
+          args: >-
+            fn run resources --image gcr.io/kustomize-functions/example-tshirt:v0.1.0
+      - name: "Run kpt function: label-namespace"
+        uses: "docker://gongpu/kpt:latest"
+        with:
+          args: >-
+            fn run resources --image gcr.io/kpt-functions/label-namespace -- label_name=color label_value=blue
+      - name: "Run kpt function: validate-rolebinding"
+        uses: "docker://gongpu/kpt:latest"
+        with:
+          args: >-
+            fn run resources --image gcr.io/kpt-functions/validate-rolebinding -- subject_name=Alice
+
+      - name: "Run kpt function: tshirt-size"
+        uses: "docker://gongpu/kpt:latest"
+        with:
+          # NOTE: functions are scoped
+          args: >-
+            fn run resources --image gcr.io/kustomize-functions/example-tshirt:v0.1.0
+      - name: "Run kpt function: label-namespace"
+        uses: "docker://gongpu/kpt:latest"
+        with:
+          args: >-
+            fn run resources --image gcr.io/kpt-functions/label-namespace -- label_name=color label_value=blue
+      - name: "Run kpt function: validate-rolebinding"
+        uses: "docker://gongpu/kpt:latest"
+        with:
+          args: >-
+            fn run resources --image gcr.io/kpt-functions/validate-rolebinding -- subject_name=Alice
+
+      - name: "Run kpt function: tshirt-size"
+        uses: "docker://gongpu/kpt:latest"
+        with:
+          # NOTE: functions are scoped
+          args: >-
+            fn run resources --image gcr.io/kustomize-functions/example-tshirt:v0.1.0
+      - name: "Run kpt function: label-namespace"
+        uses: "docker://gongpu/kpt:latest"
+        with:
+          args: >-
+            fn run resources --image gcr.io/kpt-functions/label-namespace -- label_name=color label_value=blue
+      - name: "Run kpt function: validate-rolebinding"
+        uses: "docker://gongpu/kpt:latest"
+        with:
+          args: >-
+            fn run resources --image gcr.io/kpt-functions/validate-rolebinding -- subject_name=Alice
+
+      - name: "Run kpt function: tshirt-size"
+        uses: "docker://gongpu/kpt:latest"
+        with:
+          # NOTE: functions are scoped
+          args: >-
+            fn run resources --image gcr.io/kustomize-functions/example-tshirt:v0.1.0
+      - name: "Run kpt function: label-namespace"
+        uses: "docker://gongpu/kpt:latest"
+        with:
+          args: >-
+            fn run resources --image gcr.io/kpt-functions/label-namespace -- label_name=color label_value=blue
+      - name: "Run kpt function: validate-rolebinding"
+        uses: "docker://gongpu/kpt:latest"
+        with:
+          args: >-
+            fn run resources --image gcr.io/kpt-functions/validate-rolebinding -- subject_name=Alice
