@@ -2,7 +2,7 @@ pipeline {
     agent any
 
     stages {
-        stage('Build') {
+        stage('Run kpt functions') {
             steps {
                 // This requires that docker is installed on the agent. 
                 // And your user, which is usually `jenkins`, should be added to the `docker` group to access `docker.sock`.
