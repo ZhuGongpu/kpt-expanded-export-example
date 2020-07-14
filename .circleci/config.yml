@@ -13,6 +13,7 @@ orbs:
       run-kpt-functions:
         executor: kpt-container
         steps:
+          - checkout
           - run-kpt-functions
 workflows:
   main:
