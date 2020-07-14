@@ -10,7 +10,7 @@ orbs:
         steps:
           - run: kpt fn run resources --fn-path functions.yaml
     jobs:
-      run-kpt-functions:
+      run-functions:
         executor: kpt-container
         steps:
           - checkout
@@ -19,4 +19,4 @@ orbs:
 workflows:
   main:
     jobs:
-      - kpt/run-kpt-functions
+      - kpt/run-functions
