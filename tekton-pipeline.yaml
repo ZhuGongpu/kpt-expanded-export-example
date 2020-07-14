@@ -1,0 +1,40 @@
+apiVersion: tekton.dev/v1beta1
+kind: Task
+metadata:
+  name: run-kpt-functions
+spec:
+  workspaces:
+    - name: source
+      mountPath: /source
+  steps:
+    - name: run-kpt-functions
+      image: gongpu/kpt:latest
+      args:
+        - fn
+        - run
+        - $(workspaces.source.path)/resources
+        - --fn-path
+        - $(workspaces.source.path)/functions.yaml
+      volumeMounts:
+        - name: docker-socket
+          mountPath: /var/run/docker.sock
+  volumes:
+    - name: docker-socket
+      hostPath:
+        path: /var/run/docker.sock
+        type: Socket
+---
+apiVersion: tekton.dev/v1beta1
+kind: Pipeline
+metadata:
+  name: run-kpt-functions
+spec:
+  workspaces:
+    - name: shared-workspace
+  tasks:
+    - name: kpt
+      taskRef:
+        name: run-kpt-functions
+      workspaces:
+        - name: source
+          workspace: shared-workspace
