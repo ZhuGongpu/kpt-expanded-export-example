@@ -18,6 +18,12 @@ spec:
       volumeMounts:
         - name: docker-socket
           mountPath: /var/run/docker.sock
+    - name: show-result
+      image: gongpu/kpt:latest
+      args:
+        - fn
+        - source
+        - $(workspaces.source.path)/resources
   volumes:
     - name: docker-socket
       hostPath:
