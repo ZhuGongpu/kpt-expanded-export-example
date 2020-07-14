@@ -8,7 +8,7 @@ orbs:
     commands:
       run-kpt-functions:
         steps:
-          - run: fn run resources --fn-path functions.yaml
+          - run: kpt fn run resources --fn-path functions.yaml
     jobs:
       run-kpt-functions:
         executor: kpt-container
