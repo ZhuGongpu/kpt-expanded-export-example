@@ -4,7 +4,7 @@ orbs:
     executors:
       kpt-container:
         docker:
-          - image: gongpu/kpt
+          - image: gongpu/kpt:docker
     commands:
       run-kpt-functions:
         steps:
