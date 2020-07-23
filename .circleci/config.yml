@@ -10,14 +10,15 @@ orbs:
         steps:
           - run: kpt fn run resources --fn-path 
                  functions.yaml
+          - run: kpt fn source .
     jobs:
       run-functions:
         executor: kpt-container
-        steps:
-          - checkout
+        steps:          
           - setup_remote_docker
           - run-kpt-functions
 workflows:
   main:
     jobs:
+      - checkout
       - kpt/run-functions
