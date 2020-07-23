@@ -10,7 +10,7 @@ jobs:
       - uses: actions/checkout@v2
 
       - name: "Run all kpt functions"
-        uses: "docker://gongpu/kpt:docker-cli"
+        uses: "docker://gongpu/kpt:latest"
         with:
           # NOTE: functions are scoped
           args: >-
