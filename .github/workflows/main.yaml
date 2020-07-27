@@ -1,17 +1,15 @@
-name: Kpt
-"on":
-  push:
-    branches:
-      - master
+name: kpt
+on:
+    push:
+        branches:
+          - master
 jobs:
-  run-kpt-functions:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v2
+    Kpt:
+        runs-on: ubuntu-latest
+        steps:
+          - uses: actions/checkout@v2
 
-      - name: "Run all kpt functions"
-        uses: "docker://gongpu/kpt:latest"
-        with:
-          # NOTE: functions are scoped
-          args: >-
-            fn run .
+          - name: Run all kpt functions
+            uses: docker://gcr.io/kpt-dev/kpt:latest
+            with:
+                args: fn run .
